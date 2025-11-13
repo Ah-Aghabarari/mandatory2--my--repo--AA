@@ -148,7 +148,7 @@ class Chebyshev(FunctionSpace):
         return 1 / sp.sqrt(1 - x**2)
 
     def L2_norm_sq(self, N):
-        vals = np.full(M, np.pi / 2.0)
+        vals = np.full(N, np.pi / 2.0)
         vals[0] = np.pi
         return vals
     def mass_matrix(self):
@@ -243,7 +243,7 @@ class Cosines(Trigonometric):
             return lambda Xj: scale * np.sin(j * np.pi * Xj)
 
     def L2_norm_sq(self, N):
-        vals = np.full(M, 0.5)
+        vals = np.full(N, 0.5)
         vals[0] = 1.0
         return vals
 
