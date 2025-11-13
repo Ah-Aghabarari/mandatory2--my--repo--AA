@@ -102,6 +102,7 @@ class FunctionSpace:
 class Legendre(FunctionSpace):
     def __init__(self, N, domain=(-1, 1)):
         FunctionSpace.__init__(self, N, domain=domain)
+    
     @property
     def reference_domain(self):
         return (-1, 1)
@@ -130,6 +131,10 @@ class Legendre(FunctionSpace):
 class Chebyshev(FunctionSpace):
     def __init__(self, N, domain=(-1, 1)):
         FunctionSpace.__init__(self, N, domain=domain)
+    
+    @property
+    def reference_domain(self):
+        return (-1, 1)
 
     def basis_function(self, j, sympy=False):
         if sympy:
