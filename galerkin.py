@@ -219,7 +219,7 @@ class Sines(Trigonometric):
             return lambda Xj: scale * np.cos((j + 1) * np.pi * Xj)
 
     def L2_norm_sq(self, N):
-        return 0.5
+        return np.full(N, 0.5)
 
 
 class Cosines(Trigonometric):
